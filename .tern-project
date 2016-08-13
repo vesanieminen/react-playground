@@ -1,0 +1,12 @@
+{
+  "libs": [
+    ],
+  "plugins": {
+      "node": {},
+      "commonjs": {},
+      "requirejs": {
+            "baseURL": "./",
+            "paths": {}
+          }
+    }
+}
