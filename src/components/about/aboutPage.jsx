@@ -9,6 +9,7 @@ var About = React.createClass({
 				<h1>About</h1>
 				<p>
 					This application uses the following technologies:
+				</p>
 					<ul>
 						<li>React</li>
 						<li>React Router</li>
@@ -18,7 +19,6 @@ var About = React.createClass({
 						<li>Browserify</li>
 						<li>Bootstrap</li>
 					</ul>
-				</p>
 			</div>
 		); 
 	}
