@@ -9,7 +9,6 @@ var App = React.createClass({
 		return (
 			<div>
 				<Header />
-                <h2>{this.props.location.pathname}</h2>
                 {this.props.children}
 			</div>
 		);

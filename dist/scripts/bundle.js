@@ -53052,7 +53052,6 @@ var App = React.createClass({displayName: "App",
 		return (
 			React.createElement("div", null, 
 				React.createElement(Header, null), 
-                React.createElement("h2", null, this.props.location.pathname), 
                 this.props.children
 			)
 		);
@@ -53181,6 +53180,26 @@ render: function() {
 module.exports = Home;
 
 },{"react":237}],248:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+var Link = require('react-router').Link;
+
+var NotFoundPage = React.createClass({displayName: "NotFoundPage",
+	render: function() {
+		return (
+			React.createElement("div", null, 
+				React.createElement("h1", null, "Page Not Found"), 
+				React.createElement("p", null, "Whoops! Sorry, there is nothing to see here."), 
+				React.createElement("p", null, React.createElement(Link, {to: "/"}, "Back to Home"))
+			)
+		);
+	}
+});
+
+module.exports = NotFoundPage;
+
+},{"react":237,"react-router":57}],249:[function(require,module,exports){
 "use strict"
 
 var React = require('react');
@@ -53191,7 +53210,7 @@ var routes = require('./routes');
 
 ReactDOM.render(React.createElement(Router, {history: hashHistory}, routes), document.getElementById('app'));
 
-},{"./routes":249,"react":237,"react-dom":27,"react-router":57}],249:[function(require,module,exports){
+},{"./routes":250,"react":237,"react-dom":27,"react-router":57}],250:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -53203,10 +53222,11 @@ var routes = (
   React.createElement(Route, {path: "/", component: require('./components/app.jsx')}, 
     React.createElement(IndexRoute, {component: require('./components/homePage.jsx')}), 
     React.createElement(Route, {path: "/authors", component: require('./components/authors/authorPage.jsx')}), 
-    React.createElement(Route, {path: "/about", component: require('./components/about/aboutPage.jsx')})
+    React.createElement(Route, {path: "/about", component: require('./components/about/aboutPage.jsx')}), 
+	React.createElement(Route, {path: "*", component: require('./components/notFoundPage.jsx')})
   )
 )
 
 module.exports = routes;
 
-},{"./components/about/aboutPage.jsx":242,"./components/app.jsx":243,"./components/authors/authorPage.jsx":245,"./components/homePage.jsx":247,"react":237,"react-router":57}]},{},[248]);
+},{"./components/about/aboutPage.jsx":242,"./components/app.jsx":243,"./components/authors/authorPage.jsx":245,"./components/homePage.jsx":247,"./components/notFoundPage.jsx":248,"react":237,"react-router":57}]},{},[249]);
