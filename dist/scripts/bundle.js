@@ -30871,8 +30871,7 @@ render: function() {
     return (
         React.createElement("div", {className: "jumbotron"}, 
             React.createElement("h1", null, "Pluralsight Administration"), 
-            React.createElement("p", null, "React, React Router, and Flux for ultra-responseive web apps."), 
-            React.createElement("p", null, React.createElement("a", {className: "btn btn-primary btn-lg", role: "button"}, "Learn More"))
+            React.createElement("p", null, "React, React Router, and Flux for ultra-responseive web apps.")
         )
     );
 }
@@ -30885,9 +30884,8 @@ module.exports = Home;
 $ = jQuery = require('jquery');
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Home = require('./components/homePage.jsx');
-
+var Home = require('./components/homePage.js');
 
 ReactDOM.render(React.createElement(Home, null), document.getElementById('app'));
 
-},{"./components/homePage.jsx":176,"jquery":1,"react":175,"react-dom":3}]},{},[177]);
+},{"./components/homePage.js":176,"jquery":1,"react":175,"react-dom":3}]},{},[177]);
