@@ -12,7 +12,7 @@ var AuthorList = React.createClass({
     deleteAuthor: function(id, event) {
             event.preventDefault();
             console.log(id);
-		    AuthorApi.deleteAuthor(id);
+            AuthorApi.deleteAuthor(id);
             this.props.onChange();
             toastr.success('Author Deleted');
     },
@@ -42,5 +42,6 @@ var AuthorList = React.createClass({
     }
 
 });
+
 
 module.exports = AuthorList;

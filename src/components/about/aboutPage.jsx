@@ -8,7 +8,7 @@ var About = React.createClass({
 			<div>
 				<h1>About</h1>
 				<p>
-					This application uses the following technologies:
+					This application uses the following tools:
 				</p>
 					<ul>
 						<li>React</li>
