@@ -8,7 +8,7 @@ var Route = ReactRouter.Route;
 var routes = (
   <Route path="/" component={require('./components/app.jsx')}>
     <IndexRoute component={require('./components/homePage.jsx')} />
-    <Route path="/graph" component={require('./components/graph/graph.jsx')} />
+    <Route path="/house" component={require('./components/house/house.jsx')} />
 
     <Route path="/authors" component={require('./components/authors/authorPage.jsx')} />
     <Route path="/author" component={require('./components/authors/manageAuthorPage.jsx')} />

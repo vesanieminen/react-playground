@@ -12,7 +12,7 @@ var Header = React.createClass({
                         <div className="md-col-12">
                             <ul className="nav navbar-nav">
                                 <li><Link to="/">Home</Link></li>
-                                <li><Link to="/graph">Graph</Link></li>
+                                <li><Link to="/house">House Graph</Link></li>
                                 <li><Link to="/about">About</Link></li>
                             </ul>
                         </div>
