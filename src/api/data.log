@@ -1,7 +1,8 @@
-//Divisors		1	1	10	10	10	10	10	10	10	10	10	10	10	100	1	10	10	1	1
+module.exports = {
+    descriptors: {
+    }, Divisors		1	1	10	10	10	10	10	10	10	10	10	10	10	100	1	10	10	1	1
 //Date	Time	version	R-version	BT1	BT2	EB100-EP14-BT3	BT6	BT7	EB100-BT16	EB100-BT18	EB100-BT19	EB100-BT20	EB100-BT21	EB100-BT22	Tot.Int.Add	Alarm number	Calc. Supply	BT1-Average	Relays PCA-Base	Prio
 //
-module.exports = {
 	data: 
 	[
         {date: '2016-09-08', time: '20:35:00', version: 7641, r-version: 2, bt1: 125, bt2: 227, bt3: 232, bt6: 430, bt7: 527, bt16: 73, bt18: 435, bt19: 439, bt20: 220, bt21: 73, bt22: 200, tot-int-add: 0, alarms: 0, calc-supply: 230, bt1-avg: 154, relays: 3, prio: 20},
@@ -11,7 +12,7 @@ module.exports = {
         {date: '2016-09-08', time: '20:55:05', version: 7641, r-version: 2, bt1: 116, bt2: 227, bt3: 231, bt6: 458, bt7: 526, bt16: 71, bt18: 462, bt19: 467, bt20: 219, bt21: 68, bt22: 196, tot-int-add: 0, alarms: 0, calc-supply: 232, bt1-avg: 152, relays: 3, prio: 20},
         {date: '2016-09-08', time: '21:00:05', version: 7641, r-version: 2, bt1: 114, bt2: 227, bt3: 231, bt6: 463, bt7: 527, bt16: 71, bt18: 471, bt19: 473, bt20: 217, bt21: 71, bt22: 197, tot-int-add: 0, alarms: 0, calc-supply: 234, bt1-avg: 152, relays: 3, prio: 20},
         {date: '2016-09-08', time: '21:05:09', version: 7641, r-version: 2, bt1: 112, bt2: 227, bt3: 232, bt6: 471, bt7: 526, bt16: 69, bt18: 478, bt19: 481, bt20: 215, bt21: 69, bt22: 195, tot-int-add: 0, alarms: 0, calc-supply: 235, bt1-avg: 152, relays: 3, prio: 20},
-        {date: '2016-09-08', time: '21:10:09', version: 7641, r-version: 2, bt1: 110, bt2: 227, bt3: 230, bt6: 479, bt7: 527, bt16: 73, bt18: 486, bt19: 490, bt20: 215, bt21: 74, bt22: 194, tot-int-add: 0, alarms: 0, calc-supply: 235, bt1-avg: 151, relays: 3, prio: 20},
+        {date: '2016-09-08', time: '21:10:09', version: 7641, r-version: 2, bt1: 110, bt2: 227, bt3: 230, bt6: 479, bt7: 527, bt16: 73, bt18: 486, bt19: 490, bt20: 215, bt21: 74, bt22: 194, tot-int-add: 0, alarms: 0, calc-supply: 235, bt1-avg: 151, relays: 3, prio: 20}
         {date: '2016-09-08', time: '21:15:09', version: 7641, r-version: 2, bt1: 108, bt2: 228, bt3: 230, bt6: 486, bt7: 526, bt16: 71, bt18: 494, bt19: 497, bt20: 216, bt21: 70, bt22: 194, tot-int-add: 0, alarms: 0, calc-supply: 236, bt1-avg: 151, relays: 3, prio: 20},
         {date: '2016-09-08', time: '21:20:14', version: 7641, r-version: 2, bt1: 107, bt2: 227, bt3: 227, bt6: 496, bt7: 525, bt16: 71, bt18: 502, bt19: 506, bt20: 213, bt21: 72, bt22: 193, tot-int-add: 0, alarms: 0, calc-supply: 236, bt1-avg: 151, relays: 3, prio: 20},
         {date: '2016-09-08', time: '21:25:14', version: 7641, r-version: 2, bt1: 106, bt2: 230, bt3: 226, bt6: 503, bt7: 525, bt16: 70, bt18: 508, bt19: 512, bt20: 212, bt21: 75, bt22: 198, tot-int-add: 0, alarms: 0, calc-supply: 237, bt1-avg: 150, relays: 3, prio: 20},
