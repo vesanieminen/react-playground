@@ -1,8 +1,53 @@
+//Divisors		1	1	10	10	10	10	10	10	10	10	10	10	10	100	1	10	10	1	1
+//Date	Time	version	R-version	BT1	BT2	EB100-EP14-BT3	BT6	BT7	EB100-BT16	EB100-BT18	EB100-BT19	EB100-BT20	EB100-BT21	EB100-BT22	Tot.Int.Add	Alarm number	Calc. Supply	BT1-Average	Relays PCA-Base	Prio
+
 module.exports = {
     descriptors: {
-    }, Divisors		1	1	10	10	10	10	10	10	10	10	10	10	10	100	1	10	10	1	1
-//Date	Time	version	R-version	BT1	BT2	EB100-EP14-BT3	BT6	BT7	EB100-BT16	EB100-BT18	EB100-BT19	EB100-BT20	EB100-BT21	EB100-BT22	Tot.Int.Add	Alarm number	Calc. Supply	BT1-Average	Relays PCA-Base	Prio
-//
+        date: "Date",
+    	time: "Time",
+	    version: "Version",
+        r-version: "R-version",
+        bt1: "BT1",
+        bt2: "BT2",
+        bt3: "EB100-EP14-BT3",
+        bt6: "BT6",
+        bt7: "BT7",
+        bt16: "EB100-BT16",
+        bt18: "EB100-BT18",
+        bt19: "EB100-BT19",
+        bt20: "EB100-BT20",
+        bt21: "EB100-BT21",
+        bt22: "EB100-BT22",
+        tot-int-add: "Tot.Int.Add",
+        alarms: "Alarm number",
+        calc-supply: "Calc. Supply",
+        bt1-avg: "BT1-Average",
+        relays: "Relays PCA-Base",
+        prio: "Prio"
+    }, 
+    divisors: {
+        date: 1,
+    	time: 1,
+	    version: 10,
+        r-version: 10,
+        bt1: 10,
+        bt2: 10,
+        bt3: 10,
+        bt6: 10,
+        bt7: 10,
+        bt16: 10,
+        bt18: 10,
+        bt19: 10,
+        bt20: 10,
+        bt21: 10,
+        bt22: 10,
+        tot-int-add: 100,
+        alarms: 1,
+        calc-supply: 10,
+        bt1-avg: 10,
+        relays: 1,
+        prio: 1
+    },
 	data: 
 	[
         {date: '2016-09-08', time: '20:35:00', version: 7641, r-version: 2, bt1: 125, bt2: 227, bt3: 232, bt6: 430, bt7: 527, bt16: 73, bt18: 435, bt19: 439, bt20: 220, bt21: 73, bt22: 200, tot-int-add: 0, alarms: 0, calc-supply: 230, bt1-avg: 154, relays: 3, prio: 20},
