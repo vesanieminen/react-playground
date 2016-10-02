@@ -1,26 +1,30 @@
 'use strict';
 
-require('../../../bower_components/vaadin-charts/react');
+require('vaadin-charts');
 var React = require('react');
 var HouseApi = require('../../api/houseApi.js');
 
 var House = React.createClass({
     getInitialState: function() {
-        HouseApi.getHouseData();
+		var data = HouseApi.getHouseData().slice(0, 10);
         return {
-            data: []
+            data: data,
+            descriptors: HouseApi.getDescriptors(),
+            divisors: HouseApi.getDivisors()
         };
     },
-
     render: function() {
+		var createDataPoint = function(item) {
+            return "" + item.bt1 / 10.0 +","
+		};
         return (
             <div>
 				<vaadin-line-chart>
-				  <chart-title>Fibonacci</chart-title>
-				  <x-axis><title>Index</title></x-axis>
-				  <y-axis><title>Value</title></y-axis>
-				  <data-series>
-					<data>0, 1, 1, 2, 3, 5, 8, 13</data>
+				  <chart-title>House Graphs</chart-title>
+				  <x-axis><title>Time</title></x-axis>
+				  <y-axis><title>Temperature</title></y-axis>
+				  <data-series name="House Temperature">
+					<data>{this.state.data.map(createDataPoint)}</data>
 				  </data-series>
 				</vaadin-line-chart>
             </div>

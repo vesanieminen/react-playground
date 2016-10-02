@@ -57,6 +57,7 @@ gulp.task('html', function () {
 
 gulp.task('js', function () {
     browserify(config.paths.mainJs)
+        .require('./bower_components/vaadin-charts/react',{expose:'vaadin-charts'})  
         .transform(reactify)
         .bundle()
         .on('error', console.error.bind(console))
