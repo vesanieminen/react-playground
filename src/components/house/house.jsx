@@ -1,36 +1,42 @@
 'use strict';
 
-require('vaadin-charts');
 var React = require('react');
-var HouseApi = require('../../api/houseApi.js');
+
+var DataSeries = React.createClass( {
+	render: function() {
+		var divisor = this.props.divisors[this.props.key];
+		var key = this.props.key;
+		var data = this.props.data;
+		var createDataPoint = function(item) {
+            return "" + item[data[key]] / divisor +","
+		};
+		return(
+			<data-series name={this.props.name}>
+				<data>{this.props.data.map(createDataPoint)}</data>
+			</data-series>
+		);
+	}
+});
 
 var House = React.createClass({
-    getInitialState: function() {
-		var data = HouseApi.getHouseData();
-        return {
-            data: data,
-            descriptors: HouseApi.getDescriptors(),
-            divisors: HouseApi.getDivisors()
-        };
-    },
+	getDataSeries: function(key) {
+		var name = this.props.descriptors[key].description;
+		return (
+			<DataSeries key={key} name={name} divisors={this.props.divisors} data={this.props.data} />
+		);
+	},
     render: function() {
-		var createDataPoint = function(item) {
-            return "" + item.bt1 / 10.0 +","
-		};
+
         return (
             <div>
 				<vaadin-line-chart>
 				  <chart-title>House Graphs</chart-title>
-				  <x-axis><title>Time</title></x-axis>
-				  <y-axis><title>Temperature</title></y-axis>
-				  <data-series name="House Temperature">
-					<data>{this.state.data.map(createDataPoint)}</data>
-				  </data-series>
+				  <x-axis type="datetime"><title>Time</title></x-axis>
+				  <y-axis min="0"><title>Temperature (°C)</title></y-axis>
+						{this.props.keys.map(this.getDataSeries)}
 				  <plot-options>
 					<line>
-						<marker>
-							<enabled>0</enabled>
-						</marker>
+						<marker enabled="false"> </marker>
 					</line>
 				  </plot-options>
 				</vaadin-line-chart>
