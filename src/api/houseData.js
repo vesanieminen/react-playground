@@ -18,12 +18,12 @@ module.exports = {
         bt20: {id: "EB100-BT20", description: "Exhaust Air"},
         bt21: {id: "EB100-BT21", description: "Extract Air"},
         bt22: {id: "EB100-BT22", description: "Supply Air"},
-        tot_int_add: {id: "Tot.Int.Add", description: ""},
-        alarms: {id: "Alarm number", description: ""},
-        calc_supply: {id: "Calc. Supply", description: ""},
-        bt1_avg: {id: "BT1-Average", description: ""},
-        relays: {id: "Relays PCA-Base", description: ""},
-        prio: {id: "Prio", description: ""}
+        tot_int_add: {id: "Tot.Int.Add", description: "Electrical Addition Power"},
+        alarms: {id: "Alarm number", description: "Alarms"},
+        calc_supply: {id: "Calc. Supply", description: "Calculated Flow Temp"},
+        bt1_avg: {id: "BT1-Average", description: "Avg. Outdoor Temp"},
+        relays: {id: "Relays PCA-Base", description: "Relays PCA-Base"},
+        prio: {id: "Prio", description: "Priority"}
     }, 
     divisors: {
         date: 1,
