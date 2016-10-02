@@ -22,7 +22,7 @@ var Home = React.createClass({
                     data={this.state.data}
                     descriptors={this.state.descriptors}
                     divisors={this.state.divisors}
-                    keys={['bt1', 'bt2']}
+                    ids={['bt1', 'bt2']}
                 />
             </div>
         );

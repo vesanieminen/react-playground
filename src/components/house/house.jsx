@@ -4,11 +4,12 @@ var React = require('react');
 
 var DataSeries = React.createClass( {
 	render: function() {
-		var divisor = this.props.divisors[this.props.key];
-		var key = this.props.key;
+		var divisor = this.props.divisors[this.props.id];
+		var key = this.props.id;
 		var data = this.props.data;
 		var createDataPoint = function(item) {
-            return "" + item[data[key]] / divisor +","
+			console.log(item[key]);
+            return "" + item[key] / divisor +","
 		};
 		return(
 			<data-series name={this.props.name}>
@@ -19,10 +20,10 @@ var DataSeries = React.createClass( {
 });
 
 var House = React.createClass({
-	getDataSeries: function(key) {
-		var name = this.props.descriptors[key].description;
+	getDataSeries: function(id) {
+		var name = this.props.descriptors[id].description;
 		return (
-			<DataSeries key={key} name={name} divisors={this.props.divisors} data={this.props.data} />
+			<DataSeries key={id} id={id} name={name} divisors={this.props.divisors} data={this.props.data} />
 		);
 	},
     render: function() {
@@ -33,7 +34,7 @@ var House = React.createClass({
 				  <chart-title>House Graphs</chart-title>
 				  <x-axis type="datetime"><title>Time</title></x-axis>
 				  <y-axis min="0"><title>Temperature (°C)</title></y-axis>
-						{this.props.keys.map(this.getDataSeries)}
+						{this.props.ids.map(this.getDataSeries)}
 				  <plot-options>
 					<line>
 						<marker enabled="false"> </marker>
