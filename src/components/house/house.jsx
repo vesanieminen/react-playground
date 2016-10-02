@@ -35,6 +35,7 @@ var House = React.createClass({
         return (
             <div style={{height: "600px"}}>
 				<vaadin-line-chart>
+                    <exporting enabled="false" />
 				  <chart-title>House Graphs</chart-title>
 					<subtitle>2016 September</subtitle>
 				  <x-axis type="datetime"><title>Time</title></x-axis>
