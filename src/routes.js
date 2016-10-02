@@ -9,7 +9,6 @@ var routes = (
   <Route path="/" component={require('./components/app.jsx')}>
     <IndexRoute component={require('./components/homePage.jsx')} />
     <Route path="/house" component={require('./components/house/house.jsx')} />
-
     <Route path="/authors" component={require('./components/authors/authorPage.jsx')} />
     <Route path="/author" component={require('./components/authors/manageAuthorPage.jsx')} />
     <Route path="/author/:id" component={require('./components/authors/manageAuthorPage.jsx')} />

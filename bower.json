@@ -1,0 +1,20 @@
+{
+  "name": "house-graph",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Vesa Nieminen"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/vesanieminen/react-playground",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vaadin-charts": "^3.2.0"
+  }
+}

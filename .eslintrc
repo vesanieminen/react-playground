@@ -18,7 +18,8 @@
             "no-underscore-dangle": 0,
             "no-alert": 0,
             "no-lone-blocks": 0,
-            "no-console": 0
+            "no-console": 0,
+            "no-mixed-spaces-and-tabs": 0
         },
         "globals": {
 jQuery: true,
