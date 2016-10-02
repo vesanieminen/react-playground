@@ -7,13 +7,19 @@ var DataSeries = React.createClass( {
 		var divisor = this.props.divisors[this.props.id];
 		var key = this.props.id;
 		var data = this.props.data;
-		var createDataPoint = function(item) {
-			console.log(item[key]);
-            return "" + item[key] / divisor +","
-		};
+		var dataPoints = { values: []};
+		this.props.data.forEach(function(entry) {
+			//dataPoints.push(entry[key]);
+			dataPoints.values.push([ Date.parse(entry['date'] + " " + entry['time']), entry[key] ]);
+		}, this);
+		console.log(dataPoints);
+		console.log(dataPoints.values.map(JSON.stringify).join(','));
+		//var createDataPoint = function(item) {
+        //    return "" + item[key] / divisor +","
+		//};
 		return(
 			<data-series name={this.props.name}>
-				<data>{this.props.data.map(createDataPoint)}</data>
+				<data>{dataPoints.values.map(JSON.stringify).join(',')}</data>
 			</data-series>
 		);
 	}
