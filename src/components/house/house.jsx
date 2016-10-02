@@ -38,7 +38,7 @@ var House = React.createClass({
 				  <chart-title>House Graphs</chart-title>
 					<subtitle>2016 September</subtitle>
 				  <x-axis type="datetime"><title>Time</title></x-axis>
-				  <y-axis min="0"><title>Temperature (°C)</title></y-axis>
+				  <y-axis><title>Temperature (°C)</title></y-axis>
 						{this.props.ids.map(this.getDataSeries)}
 				  <plot-options>
 					<line>
