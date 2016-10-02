@@ -6,7 +6,7 @@ var HouseApi = require('../../api/houseApi.js');
 
 var House = React.createClass({
     getInitialState: function() {
-		var data = HouseApi.getHouseData().slice(0, 10);
+		var data = HouseApi.getHouseData();
         return {
             data: data,
             descriptors: HouseApi.getDescriptors(),
@@ -26,6 +26,13 @@ var House = React.createClass({
 				  <data-series name="House Temperature">
 					<data>{this.state.data.map(createDataPoint)}</data>
 				  </data-series>
+				  <plot-options>
+					<line>
+						<marker>
+							<enabled>0</enabled>
+						</marker>
+					</line>
+				  </plot-options>
 				</vaadin-line-chart>
             </div>
             );
